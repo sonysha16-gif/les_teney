@@ -24,6 +24,19 @@ const CarvedButton = ({ children, onClick, className = "", isLink = false, href 
       {...(isLink ? { href, target: "_blank", rel: "noopener noreferrer" } : { onClick })}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      animate={{ 
+        scale: [1, 1.08, 1],
+        boxShadow: [
+          "0 0 15px rgba(212, 175, 55, 0.4)",
+          "0 0 40px rgba(212, 175, 55, 0.8)",
+          "0 0 15px rgba(212, 175, 55, 0.4)"
+        ]
+      }}
+      transition={{ 
+        duration: 2.2, 
+        repeat: Infinity, 
+        ease: "easeInOut" 
+      }}
       className={`relative px-4 py-3 md:px-8 md:py-3.5 font-accent font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm flex items-center justify-center min-w-[220px] md:min-w-[260px] cursor-pointer transition-all duration-300 bg-gold text-black shadow-[0_0_15px_rgba(212,175,55,0.3)] ${className}`}
     >
        {/* Ornaments */}
@@ -172,7 +185,7 @@ export default function App() {
       content: {
         left: (
           <div className="text-left space-y-4">
-            <p className="text-white/60 text-[10px] tracking-[0.5em] uppercase font-bold font-serif">ПСИХОЛОГИЧЕСКИЙ КВЕСТ</p>
+            <p className="text-[#fdfaf3]/60 text-[10px] tracking-[0.5em] uppercase font-bold font-serif">ПСИХОЛОГИЧЕСКИЙ КВЕСТ</p>
             <h2 className="text-4xl md:text-7xl font-serif text-[#fdfaf3] tracking-widest glow-gold leading-tight drop-shadow-[0_0_30px_rgba(212,175,55,0.4)] font-bold not-italic">ЛЕС ТЕНЕЙ</h2>
             <p className="text-gold text-2xl md:text-4xl font-serif mt-4 font-bold uppercase">5.000 <span className="text-[0.35em] align-middle ml-1">РУБ.</span></p>
           </div>
@@ -402,12 +415,12 @@ export default function App() {
       {/* Footer */}
       <footer className="py-24 bg-[#050505] flex flex-col items-center border-t border-gold/5">
         <div className="flex flex-col items-center space-y-12 max-w-4xl px-4 text-center">
-          <p className="text-white/40 text-[10px] tracking-[0.6em] uppercase font-serif">ЛЕС ТЕНЕЙ | ПСИХОЛОГИЧЕСКИЙ КВЕСТ</p>
+          <p className="text-[#fdfaf3]/40 text-[10px] tracking-[0.6em] uppercase font-serif">ЛЕС ТЕНЕЙ | ПСИХОЛОГИЧЕСКИЙ КВЕСТ</p>
           <div className="flex gap-16">
             <a href="https://t.me/sofi_arih" target="_blank" rel="noopener noreferrer" className="text-gold/50 hover:text-gold transition-all tracking-[0.4em] text-[11px] uppercase font-bold border-b border-gold/10 hover:border-gold pb-2 font-serif">Telegram</a>
             <a href="mailto:s.a.16@yandex.ru" className="text-gold/50 hover:text-gold transition-all tracking-[0.4em] text-[11px] uppercase font-bold border-b border-gold/10 hover:border-gold pb-2 font-serif">Email</a>
           </div>
-          <p className="text-white/20 text-[9px] tracking-[0.4em] uppercase">© 2026 SOFYA ARIH | ТУТ НАЧИНАЕТСЯ ТВОЙ ПУТЬ</p>
+          <p className="text-[#fdfaf3]/20 text-[9px] tracking-[0.4em] uppercase">© 2026 SOFYA ARIH | ТУТ НАЧИНАЕТСЯ ТВОЙ ПУТЬ</p>
         </div>
       </footer>
 
@@ -416,8 +429,19 @@ export default function App() {
         {showScrollTop && (
           <motion.button
             initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ 
+              opacity: 1, 
+              scale: [1, 1.05, 1] 
+            }}
             exit={{ opacity: 0, scale: 0.5 }}
+            transition={{
+              scale: {
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              },
+              opacity: { duration: 0.3 }
+            }}
             onClick={scrollToTop}
             className="fixed bottom-12 right-12 z-50 w-12 h-12 md:w-16 md:h-16 bg-black/90 backdrop-blur-2xl border border-gold/30 text-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-all shadow-2xl cursor-pointer"
           >

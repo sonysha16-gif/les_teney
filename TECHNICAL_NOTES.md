@@ -20,6 +20,10 @@ The "About Me" section uses a complex layout to ensure engagement:
 - **Deep Shadows**: A custom `.text-shadow-deep` class is applied to all primary text.
 - **Typography**: Primary text uses a "creamy white" (`#fdfaf3`) for a softer, more premium look. Price formatting uses relative scaling (`text-[0.35em]`) for currency symbols.
 
+## Animation & Interaction
+- **Breathing Buttons**: All buttons include a strong `scale` and `box-shadow` pulse animation (`scale: [1, 1.08, 1]`) to create a prominent, inviting interface.
+- **Photo Float**: The about section photo features a vertical floating motion to maintain the cinematic quality.
+
 ### Mobile Optimization
 - **Vertical Spacing**: Reduced bottom padding of the content wrapper and grid gaps on mobile to ensure multi-point lists (like Quest Structure) fit on smaller screens without being covered by navigation buttons.
 - **Custom Positioning**: Specific slides (like Slide 7) use custom background positioning (`bg-[15%_center]`) on mobile to ensure key visual elements remain visible even when cropped.
