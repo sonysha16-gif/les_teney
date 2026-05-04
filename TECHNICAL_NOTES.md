@@ -16,8 +16,9 @@ The "About Me" section uses a complex layout to ensure engagement:
 ## Typography & Visuals
 
 ### Deep Shadows & Darkening
-- **Image Darkening**: All banner images are darkened by 30% using a dedicated `bg-black/30` overlay layer. This provides consistent visual style across all browsers (including Telegram's embedded browser) where CSS filters might be unsupported.
-- **Deep Shadows**: A custom `.text-shadow-deep` class is applied to all primary text:
+- **Image Darkening**: All banner images are darkened by 30% using a dedicated `bg-black/30` overlay layer. This provides consistent visual style across all browsers (including Telegram's embedded browser).
+- **Deep Shadows**: A custom `.text-shadow-deep` class is applied to all primary text.
+- **Typography**: Primary text uses a "creamy white" (`#fdfaf3`) for a softer, more premium look. Price formatting uses relative scaling (`text-[0.35em]`) for currency symbols.
 
 ### Mobile Optimization
 - **Vertical Spacing**: Reduced bottom padding of the content wrapper and grid gaps on mobile to ensure multi-point lists (like Quest Structure) fit on smaller screens without being covered by navigation buttons.

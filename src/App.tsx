@@ -98,7 +98,7 @@ export default function App() {
         left: (
           <div className="space-y-4">
              <h3 className="text-gold font-serif text-3xl md:text-5xl tracking-widest uppercase mb-4 md:mb-6 font-bold not-italic">СТРУКТУРА КВЕСТА</h3>
-             <ul className="space-y-1 md:space-y-2 text-lg md:text-3xl text-white font-serif italic list-none">
+             <ul className="space-y-1 md:space-y-2 text-lg md:text-3xl text-[#fdfaf3] font-serif italic list-none">
                {["1. Страх", "2. Проводник", "3. Лес и Хижина", "4. Другой мир и страшная сказка", "5. Королевство и любимая сказка"].map((it, idx) => (
                 <li key={idx} className="flex gap-4 items-center group"><span className="text-gold/50 text-xl font-serif group-hover:rotate-90 transition-all">◇</span> {it}</li>
               ))}
@@ -107,7 +107,7 @@ export default function App() {
         ),
         right: (
           <div className="space-y-4 pt-1 md:-mt-12 lg:-mt-24 md:pl-48 text-left">
-             <ul className="space-y-1 md:space-y-2 text-lg md:text-2xl text-white font-serif italic list-none">
+             <ul className="space-y-1 md:space-y-2 text-lg md:text-2xl text-[#fdfaf3] font-serif italic list-none">
                {["6. Родовой дом", "7. Подводное царство", "8. Мир из огня", "9. Пещера и Древо", "10. Воздушный замок и путь к целостности"].map((it, idx) => (
                  <li key={idx} className="flex gap-4 items-center group"><span className="text-gold/50 text-xl font-serif group-hover:rotate-90 transition-all">◇</span> {it}</li>
                ))}
@@ -137,7 +137,7 @@ export default function App() {
                 "Влияние на все сферы жизни",
                 "Контакт с бессознательным"
               ].map((item, i) => (
-                <li key={i} className="flex gap-5 items-center justify-start md:justify-end text-lg md:text-xl tracking-wide text-white font-serif italic">
+                <li key={i} className="flex gap-5 items-center justify-start md:justify-end text-lg md:text-xl tracking-wide text-[#fdfaf3] font-serif italic">
                   <span className="w-2.5 h-2.5 bg-gold/50 rotate-45 shrink-0" />
                   {item}
                 </li>
@@ -155,7 +155,7 @@ export default function App() {
       content: {
         right: (
           <div className="space-y-4">
-            <p className="text-xl md:text-2xl lg:text-3xl text-white font-serif italic leading-relaxed tracking-wide">
+            <p className="text-xl md:text-2xl lg:text-3xl text-[#fdfaf3] font-serif italic leading-relaxed tracking-wide">
               В тени скрывается <br className="hidden md:block"/> огромный потенциал.
             </p>
             <p className="text-xl md:text-2xl lg:text-3xl text-gold-light font-serif italic leading-relaxed tracking-wide">
@@ -173,14 +173,14 @@ export default function App() {
         left: (
           <div className="text-left space-y-4">
             <p className="text-white/60 text-[10px] tracking-[0.5em] uppercase font-bold font-serif">ПСИХОЛОГИЧЕСКИЙ КВЕСТ</p>
-            <h2 className="text-4xl md:text-7xl font-serif text-white tracking-widest glow-gold leading-tight drop-shadow-[0_0_30px_rgba(212,175,55,0.4)] font-bold not-italic">ЛЕС ТЕНЕЙ</h2>
-            <p className="text-gold text-2xl md:text-4xl font-serif mt-4 font-bold">5.000 РУБ.</p>
+            <h2 className="text-4xl md:text-7xl font-serif text-[#fdfaf3] tracking-widest glow-gold leading-tight drop-shadow-[0_0_30px_rgba(212,175,55,0.4)] font-bold not-italic">ЛЕС ТЕНЕЙ</h2>
+            <p className="text-gold text-2xl md:text-4xl font-serif mt-4 font-bold uppercase">5.000 <span className="text-[0.35em] align-middle ml-1">РУБ.</span></p>
           </div>
         ),
         right: (
           <div className="space-y-4">
-            <p className="text-xl md:text-3xl text-white font-serif italic leading-snug">Исследуй свой внутренний мир.</p>
-            <p className="text-xl md:text-3xl text-white font-serif italic leading-snug">Познакомься с теневой стороной.</p>
+            <p className="text-xl md:text-3xl text-[#fdfaf3] font-serif italic leading-snug">Исследуй свой внутренний мир.</p>
+            <p className="text-xl md:text-3xl text-[#fdfaf3] font-serif italic leading-snug">Познакомься с теневой стороной.</p>
             <p className="text-xl md:text-3xl text-gold-light font-serif italic leading-snug font-bold">Обрети целостность.</p>
           </div>
         )
@@ -234,8 +234,8 @@ export default function App() {
             >
               {current.layout === 'center' && (
                 <div className="text-center space-y-4 md:space-y-6">
-                  <p className="text-white tracking-[0.6em] uppercase text-[10px] md:text-xs font-serif font-bold glow-gold drop-shadow-[0_4px_10px_rgba(0,0,0,1)]">{current.content.overline}</p>
-                  <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif text-white uppercase tracking-[0.05em] glow-gold leading-none drop-shadow-[0_10px_30px_rgba(0,0,0,1)] font-bold">
+                  <p className="text-[#fdfaf3] tracking-[0.6em] uppercase text-[10px] md:text-xs font-serif font-bold glow-gold drop-shadow-[0_4px_10px_rgba(0,0,0,1)]">{current.content.overline}</p>
+                  <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif text-[#fdfaf3] uppercase tracking-[0.05em] glow-gold leading-none drop-shadow-[0_10px_30px_rgba(0,0,0,1)] font-bold">
                     {current.content.title}
                   </h1>
                   <p className="text-gold font-serif font-bold text-lg md:text-2xl lg:text-3xl tracking-[0.2em] uppercase border-y border-gold/10 py-4 inline-block drop-shadow-[0_5px_15px_rgba(0,0,0,1)]">
@@ -247,7 +247,7 @@ export default function App() {
               {current.layout === 'split' && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-16">
                   <div className="text-left text-shadow-deep">
-                    <div className="text-xl md:text-2xl lg:text-3xl text-white leading-relaxed font-serif italic tracking-wide drop-shadow-2xl">
+                    <div className="text-xl md:text-2xl lg:text-3xl text-[#fdfaf3] leading-relaxed font-serif italic tracking-wide drop-shadow-2xl">
                       {current.content.left}
                     </div>
                   </div>
@@ -261,7 +261,7 @@ export default function App() {
 
               {current.layout === 'left' && (
                 <div className="max-w-xs md:max-w-md lg:max-w-lg text-left text-shadow-deep">
-                  <p className="text-xl md:text-2xl lg:text-3xl text-white font-serif italic tracking-[0.05em] leading-relaxed drop-shadow-2xl">
+                  <p className="text-xl md:text-2xl lg:text-3xl text-[#fdfaf3] font-serif italic tracking-[0.05em] leading-relaxed drop-shadow-2xl">
                     {current.content.left}
                   </p>
                 </div>
@@ -269,7 +269,7 @@ export default function App() {
 
               {current.layout === 'right' && (
                 <div className="max-w-3xl ml-auto text-right text-shadow-deep">
-                   <div className="text-xl md:text-2xl lg:text-3xl text-white font-serif italic leading-relaxed">
+                   <div className="text-xl md:text-2xl lg:text-3xl text-[#fdfaf3] font-serif italic leading-relaxed">
                      {current.content.right}
                    </div>
                 </div>
@@ -290,7 +290,7 @@ export default function App() {
              </CarvedButton>
            ) : (
              <CarvedButton onClick={nextSlide}>
-               УЗНАТЬ БОЛЬШЕ О ЛЕСЕ
+               ЛИСТАТЬ ДАЛЬШЕ
              </CarvedButton>
            )}
         </div>
@@ -327,7 +327,7 @@ export default function App() {
                   />
                   <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black via-black/40 to-transparent p-6 md:p-10">
                       <p className="text-gold font-serif italic text-4xl md:text-6xl drop-shadow-[0_2px_15px_rgba(0,0,0,1)]">Софья Арих</p>
-                      <p className="text-white/90 uppercase tracking-[0.2em] font-serif text-[10px] md:text-xs mt-2 font-bold select-none drop-shadow-lg">Практикующий психолог</p>
+                      <p className="text-[#fdfaf3]/90 uppercase tracking-[0.2em] font-serif text-[10px] md:text-xs mt-2 font-bold select-none drop-shadow-lg">Практикующий психолог</p>
                   </div>
                 </motion.div>
               </div>
@@ -335,15 +335,15 @@ export default function App() {
             
             {/* Right Text */}
             <div className="w-full lg:w-1/2 space-y-10 pb-0">
-               <div className="space-y-4 text-white font-light text-lg md:text-xl leading-tight">
-                  <p className="text-4xl md:text-6xl font-serif text-white leading-none">
-                    Всех приветствую! <br className="hidden md:block"/> Меня зовут Софья Арих. 
+               <div className="space-y-4 text-[#fdfaf3] font-light text-lg md:text-xl leading-tight">
+                  <p className="text-4xl md:text-6xl font-serif text-[#fdfaf3] leading-none">
+                     Всех приветствую! <br className="hidden md:block"/> Меня зовут Софья Арих. 
                   </p>
                   <div className="w-24 h-[1px] bg-gold shadow-[0_0_15px_rgba(212,175,55,0.7)]" />
-                  <p className="text-white leading-tight">
+                  <p className="text-[#fdfaf3] leading-tight">
                     Я практикующий психолог, в своей работе во многом опираюсь на методы юнгианского анализа, КПТ, эмоционально-образной и телесной терапии.
                   </p>
-                  <p className="text-white leading-tight">
+                  <p className="text-[#fdfaf3] leading-tight">
                     Этот квест — квинтэссенция моего опыта, упакованная в увлекательное путешествие, где психология встречается с искусством самопознания.
                   </p>
                </div>
@@ -361,7 +361,7 @@ export default function App() {
                     ].map((item, idx) => (
                       <div key={idx} className="flex gap-4 items-start text-lg md:text-xl group border-b border-gold/5 pb-1">
                         <div className="w-2.5 h-2.5 bg-gold mt-2 shrink-0 group-hover:rotate-90 transition-all rotate-45" />
-                        <span className="font-light text-white">{item}</span>
+                        <span className="font-light text-[#fdfaf3]">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -385,11 +385,11 @@ export default function App() {
       <section className="py-12 md:py-24 px-4 bg-black relative flex flex-col items-center border-t border-gold/10 overflow-hidden">
          <div className="absolute inset-0 opacity-20 bg-[url('https://s10.iimage.su/s/04/gdO4H3sx72zW280KnAcYfzbuVie8UdT537mENDCld.png')] bg-fixed bg-center bg-cover" />
          <div className="max-w-5xl text-center space-y-12 relative z-10">
-           <h2 className="text-4xl md:text-7xl font-serif text-white tracking-[0.1em] glow-gold uppercase leading-tight">ГОТОВЫ ВОЙТИ <br/> В ЛЕС ТЕНЕЙ?</h2>
+           <h2 className="text-4xl md:text-7xl font-serif text-[#fdfaf3] tracking-[0.1em] glow-gold uppercase leading-tight">ГОТОВЫ ВОЙТИ <br/> В ЛЕС ТЕНЕЙ?</h2>
            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 pt-12 md:pt-20">
               <div className="text-center md:text-left space-y-2">
-                <p className="text-white/40 uppercase tracking-[0.5em] text-[10px] md:text-xs font-bold font-serif">СТОИМОСТЬ УЧАСТИЯ</p>
-                <p className="text-5xl md:text-7xl font-serif text-gold glow-gold">5.000 РУБ.</p>
+                <p className="text-[#fdfaf3]/40 uppercase tracking-[0.5em] text-[10px] md:text-xs font-bold font-serif">СТОИМОСТЬ УЧАСТИЯ</p>
+                <p className="text-5xl md:text-7xl font-serif text-gold glow-gold uppercase">5.000 <span className="text-[0.35em] align-middle ml-2">РУБ.</span></p>
               </div>
               <div className="h-px w-24 bg-gold/30 md:w-[1px] md:h-24 md:block" />
               <CarvedButton isLink href="https://t.me/sofi_arih" className="py-6 min-w-[320px] text-lg">
