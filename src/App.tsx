@@ -106,7 +106,7 @@ export default function App() {
           </div>
         ),
         right: (
-          <div className="space-y-4 pt-4 md:-mt-12 lg:-mt-24 md:pl-48 text-left">
+          <div className="space-y-4 pt-1 md:-mt-12 lg:-mt-24 md:pl-48 text-left">
              <ul className="space-y-1 md:space-y-2 text-lg md:text-2xl text-white font-serif italic list-none">
                {["6. Родовой дом", "7. Подводное царство", "8. Мир из огня", "9. Пещера и Древо", "10. Воздушный замок и путь к целостности"].map((it, idx) => (
                  <li key={idx} className="flex gap-4 items-center group"><span className="text-gold/50 text-xl font-serif group-hover:rotate-90 transition-all">◇</span> {it}</li>
@@ -209,18 +209,20 @@ export default function App() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className={`absolute inset-0 z-0 bg-cover bg-center brightness-[0.7] contrast-[1.05] ${current.mobilePosition === 'left' ? 'max-md:bg-left' : current.mobilePosition === 'left-custom' ? 'max-md:bg-[15%_center]' : ''}`}
+            className={`absolute inset-0 z-0 bg-cover bg-center contrast-[1.05] ${current.mobilePosition === 'left' ? 'max-md:bg-left' : current.mobilePosition === 'left-custom' ? 'max-md:bg-[15%_center]' : ''}`}
             style={{
               backgroundImage: `url('${current.image}')`,
             }}
           >
+            {/* Base darkening overlay for cross-browser consistency (Telegram fix) */}
+            <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/15 via-transparent to-black/15" />
           </motion.div>
         </AnimatePresence>
         
         {/* Content Wrapper */}
-        <div className={`relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center h-full ${current.contentPos === 'top' ? 'justify-start pt-4' : 'justify-center'} px-4 pb-72 md:pb-40`}>
+        <div className={`relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center h-full ${current.contentPos === 'top' ? 'justify-start pt-4' : 'justify-center'} px-4 pb-60 md:pb-40`}>
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -243,7 +245,7 @@ export default function App() {
               )}
 
               {current.layout === 'split' && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-16">
                   <div className="text-left text-shadow-deep">
                     <div className="text-xl md:text-2xl lg:text-3xl text-white leading-relaxed font-serif italic tracking-wide drop-shadow-2xl">
                       {current.content.left}
