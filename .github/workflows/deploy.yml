@@ -16,3 +16,4 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./
+        server-dir: ./les-teney.psy-sochi.ru/
